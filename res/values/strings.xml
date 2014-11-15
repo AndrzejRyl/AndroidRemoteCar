@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AGHCar</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="main_status">Status połączenia</string>
+    <string name="main_status_connected">POŁĄCZONY</string>
+    <string name="main_status_disconnected">BRAK POŁĄCZENIA</string>
+    <string name="main_connect">POŁĄCZ Z SAMOCHODEM</string>
+    <string name="main_disconnect">ODŁĄCZ SAMOCHÓD</string>
+    <string name="main_steer">STERUJ SAMOCHODEM</string>
+    <string name="main_settings">USTAWIENIA</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Anuluj</string>
+    <string name="settings_title">Ustawienia</string>
+    <string name="settings_ip">Podaj IP samochodu</string>
+    <string name="settings_network_name">Podaj nazwę hotspotu</string>
+    <string name="settings_network_pass">Podaj hasło do hotspotu</string>
+
+</resources>

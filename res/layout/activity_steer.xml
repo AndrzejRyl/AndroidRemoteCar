@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.fleenmobile.aghcar.MainActivity$PlaceholderFragment" >
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:checked="false"
+        android:onClick="toggleLights"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:textOff="Lights \nOff"
+        android:textOn="Lights \nOn" />
+
+    <ImageView
+        android:id="@+id/leftPaddle"
+        android:layout_width="@dimen/paddle_size"
+        android:layout_height="@dimen/paddle_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="Left paddle"
+        android:src="@drawable/left_paddle" />
+
+    <ImageView
+        android:id="@+id/rightPaddle"
+        android:layout_width="@dimen/paddle_size"
+        android:layout_height="@dimen/paddle_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="Right paddle"
+        android:src="@drawable/right_paddle" />
+
+</RelativeLayout>
