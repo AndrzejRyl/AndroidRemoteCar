@@ -12,6 +12,7 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -20,10 +21,10 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-	private static String mIP = "192.168.1.66";
+	private static String mIP = "192.168.0.9";
 	private String networkName = "Raspberry";
 	private String networkPass = "RaspberryPi";
-	private static int outPort = 8989;
+	private static int outPort = 8988;
 
 	public static Socket outSocket;
 	public static Socket client;
@@ -69,7 +70,7 @@ public class MainActivity extends Activity {
 			// Close sockets
 			try {
 				outSocket.close();
-				inSocket.close();
+//				inSocket.close();
 				connected = false;
 			} catch (IOException e) {
 
@@ -138,19 +139,24 @@ public class MainActivity extends Activity {
 					// Wait to WiFi to kick in
 					Thread.sleep(10000);
 
-					inSocket = new ServerSocket(outPort);
-					inSocket.setReuseAddress(true);
-					client = inSocket.accept();
+					// inSocket = new ServerSocket(outPort);
+					// inSocket.setReuseAddress(true);
+					// client = inSocket.accept();
 
+					Log.e("Zonk", "Sockets");
 					outSocket = new Socket();
 					outSocket.setReuseAddress(true);
 					outSocket.bind(null);
-					outSocket.connect(new InetSocketAddress(mIP, outPort), 5000);
+					Log.e("Zonk", "Sockets bind");
+					outSocket
+							.connect(new InetSocketAddress(mIP, outPort), 5000);
 
+					Log.e("Zonk", "Sockets connected");
 					connected = true;
 
 					setStatus();
 				} catch (Exception e) {
+					Log.e("Zonk", e.getMessage());
 				}
 
 				return null;

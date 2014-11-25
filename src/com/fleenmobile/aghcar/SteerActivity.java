@@ -66,15 +66,15 @@ public class SteerActivity extends Activity {
 	@Override
 	public void onResume() {
 		super.onResume();
-		receiverTask = new ReceiverTask(this);
-		receiverTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+		//receiverTask = new ReceiverTask(this);
+		//receiverTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 	}
 
 	@Override
 	public void onPause() {
 		super.onPause();
 
-		receiverTask.cancel(true);
+		//receiverTask.cancel(true);
 	}
 
 	private void loadVideo() {
@@ -177,7 +177,7 @@ public class SteerActivity extends Activity {
 		});
 
 		// Load video
-		// loadVideo();
+		loadVideo();
 
 		leftPaddle.bringToFront();
 		rightPaddle.bringToFront();
